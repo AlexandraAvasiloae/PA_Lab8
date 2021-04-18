@@ -11,11 +11,18 @@ public class MoviesDAO implements DAO<Movie> {
     List<Movie> movies;
     private final Database db;
 
+    /**
+     * constructor
+     */
     public MoviesDAO() {
         db = Database.getInstance();
         movies = db.getMovies();
     }
-
+    /**
+     * this method find the movies by name
+     * @param id- the id we are looking for
+     * @return- a list of movies with the specified id
+     **/
     @Override
     public List<Movie> findById(int id) {
         List<Movie> pickedMovies = new LinkedList<>();
@@ -26,6 +33,11 @@ public class MoviesDAO implements DAO<Movie> {
         return pickedMovies;
     }
 
+    /**
+     * this method find the movies by name
+     * @param name- the name we are looking for
+     * @return- a list of movies with the specified name
+     */
     @Override
     public List<Movie> findByName(String name) {
         List<Movie> pickedMovies = new LinkedList<>();
@@ -36,11 +48,19 @@ public class MoviesDAO implements DAO<Movie> {
         return pickedMovies;
     }
 
+    /**
+     * this method get all the movies
+     * @return
+     */
     @Override
     public List<Movie> getAll() {
         return movies;
     }
 
+    /**
+     * this method insert into table the movie given as argument
+     * @param movie
+     */
     @Override
     public void insert(Movie movie) {
         movies.add(movie);
@@ -54,6 +74,10 @@ public class MoviesDAO implements DAO<Movie> {
         db.executeCommand(command);
     }
 
+    /**
+     * this method delete from the table the movie given as argument
+     * @param movie
+     */
     @Override
     public void delete(Movie movie) {
         movies.remove(movie);
