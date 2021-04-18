@@ -1,4 +1,4 @@
-package db;
+package compulsory.db;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

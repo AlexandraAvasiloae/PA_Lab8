@@ -1,7 +1,7 @@
-package DAO;
+package compulsory.DAO;
 
-import db.Database;
-import db.Movie;
+import compulsory.db.Database;
+import compulsory.db.Movie;
 
 import java.util.LinkedList;
 import java.util.List;
