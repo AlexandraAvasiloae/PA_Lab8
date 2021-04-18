@@ -1,0 +1,12 @@
+CREATE TABLE junction (
+  ID_movie INT NOT NULL,
+  ID_genre INT NOT NULL,
+  PRIMARY KEY (ID_genre, ID_movie),
+  CONSTRAINT ID_movie
+    FOREIGN KEY (ID_movie)
+    REFERENCES MOVIES (ID)
+    ,
+  CONSTRAINT ID_genre
+    FOREIGN KEY (ID_genre)
+    REFERENCES GENRES (ID)
+   );

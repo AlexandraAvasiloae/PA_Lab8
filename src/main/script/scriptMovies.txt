@@ -1,0 +1,8 @@
+CREATE TABLE movies (
+    ID INT NOT NULL,
+    title VARCHAR(20) NOT NULL,
+    release_date DATE NOT NULL,
+    duration INT NOT NULL,
+    score INT NOT NULL,
+    PRIMARY KEY (ID)
+  ) ;
